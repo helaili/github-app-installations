@@ -1,0 +1,15 @@
+name: 'GitHub App Installations'
+description: 'List installations for a GitHub App'
+inputs:
+  private-key:  
+    description: 'The private key for the GitHub App'
+    required: true
+  app-id:  
+    description: 'The GitHub App ID'
+    required: true
+outputs:
+  installations: 
+    description: 'The list of installations for the GitHub App'
+runs:
+  using: 'node16'
+  main: 'index.js'
