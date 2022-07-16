@@ -15,9 +15,8 @@ try {
 
   
   appOctokit.rest.apps.listInstallations().then(res => {
-    console.log(res)
-    console.log(`Found installations : ${JSON.stringify(res.data.installations)}`)
-    core.setOutput('installations', res.data.installations)
+    console.log(`Found installations : ${JSON.stringify(res.data)}`)
+    core.setOutput('installations', res.data)
   }).catch(err => {
     core.setFailed(err.message);
   })
