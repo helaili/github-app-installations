@@ -1,6 +1,6 @@
 const core = require('@actions/core')
 const github = require('@actions/github')
-import { getOctokitOptions } from '@actions/github/lib/utils'
+const getOctokitOptions = require('@actions/github/lib/utils')
 
 // const { Octokit } = require('@octokit/rest')
 // const { createAppAuth } = require('@octokit/auth-app')
