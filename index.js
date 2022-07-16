@@ -1,6 +1,6 @@
 const core = require('@actions/core')
 const github = require('@actions/github')
-const getOctokitOptions = require('@actions/github/lib/utils')
+const utils = require('@actions/github/lib/utils')
 
 // const { Octokit } = require('@octokit/rest')
 // const { createAppAuth } = require('@octokit/auth-app')
@@ -8,7 +8,7 @@ const getOctokitOptions = require('@actions/github/lib/utils')
 
 try {
   console.log(`Retrieving installations for app ${core.getInput('app-id')}`)
-  const octokit = github.getOctokit(getOctokitOptions({
+  const octokit = github.getOctokit(utils.getOctokitOptions({
     authStrategy: github.createAppAuth,
     auth: {
       appId: core.getInput('app-id'),
